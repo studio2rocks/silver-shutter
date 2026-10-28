@@ -1,0 +1,6 @@
+{
+  "name": "Silver & Shutter — Camera & Exposure Log",
+  "description": "Precision manual photo and exposure log for film and digital photographers to track camera gear, film stocks, shutter speed, aperture, and notes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

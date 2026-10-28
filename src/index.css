@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Authentic Field Notebook Paper Background */
+.notepad-paper-bg {
+  background-color: #fbf8ee;
+  background-image: 
+    /* Vertical red margin line */
+    linear-gradient(90deg, transparent 79px, rgba(239, 68, 68, 0.28) 80px, rgba(239, 68, 68, 0.28) 81px, transparent 82px),
+    /* Subtle horizontal ruled lines (spaced every 28px) */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      rgba(148, 163, 184, 0.25) 27px,
+      rgba(148, 163, 184, 0.25) 28px
+    ),
+    /* Micro paper fiber texture */
+    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.015) 0%, transparent 100%);
+  background-size: 100% 100%, 100% 28px, 6px 6px;
+  background-attachment: local, local, fixed;
+}
+
+/* Grid Notepad Paper Option */
+.notepad-grid-bg {
+  background-color: #f8f6ed;
+  background-image: 
+    linear-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Darkroom / Night Lab Notepad Option */
+.notepad-dark-bg {
+  background-color: #121316;
+  background-image: 
+    linear-gradient(90deg, transparent 79px, rgba(239, 68, 68, 0.3) 80px, rgba(239, 68, 68, 0.3) 81px, transparent 82px),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      rgba(255, 255, 255, 0.06) 27px,
+      rgba(255, 255, 255, 0.06) 28px
+    );
+  background-size: 100% 100%, 100% 28px;
+}
+
+/* Notebook Spiral Holes Accent */
+.spiral-holes {
+  background-image: radial-gradient(circle, #333 4px, transparent 5px);
+  background-size: 100% 24px;
+  background-position: center top;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(220, 215, 200, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 115, 105, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(90, 85, 75, 0.6);
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
